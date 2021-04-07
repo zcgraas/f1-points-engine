@@ -1,7 +1,10 @@
+import RaceTable from "./Components/RaceTable";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">Zach and Joe </header>
+    <div>
+      <RaceTable />
     </div>
   );
 }
