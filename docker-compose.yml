@@ -2,15 +2,17 @@ version: "3.8"
 services:
   web:
     container_name: react_app
-    build: .
-    command: bash -c "npm install --quiet && npm run dev"
-    working_dir: /usr/app
-    volumes:
-      - .:/usr/app/
-      - /usr/app/node_modules
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "3000:3000"
-    networks:
-      - main
-networks:
-  main:
+  benis:
+    container_name: go_server
+    build:
+      context: .
+      dockerfile: ./src/api/Dockerfile
+    ports:
+      - "8080:8080"
+netwroks:
+  internal:

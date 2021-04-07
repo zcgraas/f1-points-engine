@@ -11,7 +11,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "dockerStart": "react-scripts start"
+    "dockerStart": "docker run -p 3000:3000 f1",
+    "dockerBuild": "docker build -t f1 . && docker run -p 3000:3000 f1"
   },
   "eslintConfig": {
     "extends": [

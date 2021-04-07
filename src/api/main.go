@@ -7,7 +7,7 @@ import (
 
 func main(){
 
-	getSeason("2019")
+	// getSeason("2019")
 	handler := http.NewServeMux()
 	///we create a new router to expose our api
 	//to our users

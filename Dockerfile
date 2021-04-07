@@ -1,7 +1,8 @@
 FROM node:lts
-WORKDIR /usr/app
-COPY ./package*.json ./
-RUN npm i
+
+WORKDIR /usr/app/web
+COPY package*.json ./
+RUN npm i --silent
 COPY . .
 EXPOSE 3000
-CMD ["npm", "run", "start"]
+CMD ["npm","run","start"]
