@@ -1,8 +1,11 @@
 .table-container{
     display: flex;
-    width: 80vw;
+    width: 95vw;
     justify-content: center;
     align-items: center;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    margin-top: 5vh;
+    text-align: center;
 }
+

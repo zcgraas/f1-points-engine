@@ -1,11 +1,10 @@
 import react, { Component} from 'react';
 import { Table } from 'react-bootstrap';
+
 import './Styles/RaceTable.css';
 import testData from './TestData.js'
 
-function setRaces(){
 
-}
 
 export default class RaceTable extends Component{
 
@@ -16,6 +15,7 @@ export default class RaceTable extends Component{
                     <thead>
                         <tr>
                             <th>Driver Name</th>
+                            <th>Driver Team</th>
                             {
                                 testData.races && testData.races.map((item) => {
                                     return(
@@ -26,34 +26,25 @@ export default class RaceTable extends Component{
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Hamilton</td>
-                            <td>25</td>
-                        </tr>
-                        <tr>
-                            <td>Hamilton</td>
-                        </tr>
-                        <tr>
-                            <td>Hamilton</td>
-                        </tr>
-                        <tr>
-                            <td>Hamilton</td>
-                        </tr>
-                        <tr>
-                            <td>Hamilton</td>
-                        </tr>
-                        <tr>
-                            <td>Hamilton</td>
-                        </tr>
-                        <tr>
-                            <td>Hamilton</td>
-                        </tr>
-                        <tr>
-                            <td>Hamilton</td>
-                        </tr>
-                        <tr>
-                            <td>Hamilton</td>
-                        </tr>
+                        <>
+                        {
+                            testData.teams && testData.teams.map((item)=> {
+                                
+                                return(
+                                    <>
+                                    <tr>
+                                        <td>{item.driver1}</td>
+                                        <td>{item.team}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>{item.driver2}</td>
+                                        <td>{item.team}</td>
+                                    </tr>
+                                    </>
+                                )
+                            })
+                        }
+                        </>
                     </tbody>
                 </Table>
             </div>

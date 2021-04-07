@@ -1,84 +1,97 @@
 let testData = {
     races:[
         {
-        title:'Race 1'
+            title: 'Austria'
         },
         {
-        title:'Race 2'
+            title: 'Styria'
         },
         {
-        title:'Race 3'
+            title: 'Hungary'
         },
         {
-        title:'Race 4'
+            title: 'Great Britain'
         },
         {
-        title:'Race 5'
+            title: '70th Anniversary'
         },
         {
-        title:'Race 6'
+            title: 'Spain'
         },
         {
-        title:'Race 7'
+            title: 'Belgium'
         },
         {
-        title:'Race 8'
+            title: 'Italy'
         },
         {
-        title:'Race 9'
+            title: 'Tuscany'
         },
         {
-        title:'Race 10'
+            title: 'Russia'
         },
         {
-        title:'Race 11'
+            title: 'Eifel'
         },
         {
-        title:'Race 12'
+            title: 'Portugal'
         },
         {
-        title:'Race 13'
+            title: 'Emilia Romagna'
         },
         {
-        title:'Race 14'
+            title: 'Turkey'
         },
         {
-            title:'Race 15'
+            title: 'Bahrain'
         },
         {
-            title:'Race 16'
+            title: 'Sakhir'
         },
         {
-            title:'Race 17'
-        },
-        {
-            title:'Race 18'
-        },
-        {
-            title:'Race 19'
-        },
-        {
-            title:'Race 20'
+            title: 'Abu Dhabi'
         }
 
     ],
-    drivers:[
-        'Hamilton',
-        'Hamilton',
-        'Hamilton',
-        'Hamilton',
-        'Hamilton',
-        'Hamilton',
-        'Hamilton',
-        'Hamilton',
-        'Hamilton',
-        'Hamilton',
-        'Hamilton',
-        'Hamilton',
-        'Hamilton',
-        'Hamilton',
-        'Hamilton',
-        'Hamilton'
+    teams:[
+        {
+            driver1:'Hamilton', driver2:'Bottas', team:'Mercedes'
+        },
+        {
+            driver1:'Vettel', driver2:'Leclerc', team:'Ferrari'
+        },
+        
+        {
+            driver1:'Verstappen', driver2:'Albon', team:'Red Bull'
+        },
+        
+        {
+            driver1:'Norris', driver2:'Sainz', team:'McLaren'
+        },
+      
+        {
+            driver1:'Ricciardo', driver2:'Ocon', team:'Renault'
+        },
+       
+        {
+            driver1:'Gasly', driver2:'Kvyat', team:'Toro Rosso'
+        },
+      
+        {
+            driver1:'Perez', driver2:'Stroll', team:'Racing Point'
+        },
+        
+        {
+            driver1:'Raikkonen', driver2:'Giovinazzi', team:'Alfa Romeo'
+        },
+        {
+            driver1:'Grosjean', driver2:'Magnussen', team:'Haas'
+        },
+        {
+            driver1:'Russell', driver2:'Latifi', team:'Williams'
+        }
+        
+        
     ]
 }
 
