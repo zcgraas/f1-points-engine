@@ -1,11 +1,10 @@
 import react, { Component} from 'react';
 import { Table } from 'react-bootstrap';
-
 import './Styles/RaceTable.css';
 import testData from './TestData.js'
 
 
-
+//GENERIC TABLE FOR DATA, BREAK APART INTO COMPONENTS FOR FLEXIBLE SIZING//
 export default class RaceTable extends Component{
 
     render(){
