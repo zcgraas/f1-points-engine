@@ -14,5 +14,5 @@ services:
       dockerfile: ./src/api/Dockerfile
     ports:
       - "8080:8080"
-netwroks:
+networks:
   internal:
