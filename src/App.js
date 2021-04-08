@@ -5,7 +5,7 @@ import Info from "./Components/LandingInfo";
 
 function App() {
   return (
-    <div>
+    <div style={{background: '#343a40'}}>
       <Navigation />
       <Info />
       <RaceTable />

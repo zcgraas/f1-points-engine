@@ -1,14 +1,12 @@
 .table-container{
-    display: flex;
-    width: 95vw;
-    justify-content: center;
-    align-items: center;
-    margin-left: 2.5vw;
-    margin-right: 2.5vw;
-    margin-top: 5vh;
-    text-align: center;
+    overflow-x: scroll;
 }
 
 .spacing{
     margin-bottom: 5px;
+}
+
+.table{
+    border-radius: 6px;
+    
 }
