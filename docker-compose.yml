@@ -1,17 +1,17 @@
 version: "3.8"
 services:
-  web:
+  frontend:
     container_name: react_app
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile-frontend
     ports:
       - "3000:3000"
-  benis:
-    container_name: go_server
+  backend:
+    container_name: node_backend
     build:
       context: .
-      dockerfile: ./src/api/Dockerfile
+      dockerfile: Dockerfile-backend
     ports:
       - "8080:8080"
 networks:
