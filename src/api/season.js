@@ -7,7 +7,6 @@ module.exports = getSeason = (req, response, next) => {
     .then((res) => {
       let seasonLength = res.data.MRData.total;
       let racePromiseArray = [];
-      //TODO Get fastest lap data
 
       for (let i = 1; i <= seasonLength; i++) {
         racePromiseArray.push(
@@ -20,17 +19,36 @@ module.exports = getSeason = (req, response, next) => {
 
               raceResult.push(raceName);
 
-              Races[0].Results.map((race) => {
-                raceResult[race.position] = race.Driver.familyName;
+              Races[0].Results.slice(0, 10).map((race) => {
+                raceResult[
+                  race.position - 1
+                ] = `${race.Driver.givenName[0]} ${race.Driver.familyName}`;
               });
+
+              // if (year >= 2004) {
+              //   //TODO concat name of fastest driver if season is >= 2004
+              //   racePromiseArray.push(
+              //     axios
+              //       .get(
+              //         `http://ergast.com/api/f1/${year}/${i}/fastest/1/results.json`
+              //       )
+              //       .then((res) => {
+              //         raceResult[10]=
+              //       })
+              //   );
+              // }
 
               return raceResult;
             })
         );
       }
+
       Promise.all(racePromiseArray).then((seasonResults) => {
         return response.json(seasonResults);
+        //TODO points calculation?
       });
     })
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      return res.json({ error: err });
+    });
 };

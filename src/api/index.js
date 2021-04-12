@@ -5,7 +5,6 @@ const app = express();
 
 const getPoints = require("./points");
 const getSeason = require("./season");
-const calculate = require("./calculate");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
