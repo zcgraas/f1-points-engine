@@ -1,29 +1,33 @@
 #!/usr/bin/env node
+let express = require("express");
+let app = express();
 
-var express = require("express");
-var app = express();
+let getPoints = require("./points");
+let getSeason = require("./season");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use("/", (req, res, next) => {
-  res.json({ title: "Express" });
+app.use("/test", (req, res, next) => {
+  res.json({ title: "Success" });
 });
 
-app.use("/points", getPoints(req, res, next));
-app.use("/season", getSeason(req, res, next));
+app.use("/points", (req, res) => {
+  getPoints(req, res);
+  //TODO Terminate request
+});
+app.use("/season", (req, res) => {
+  getSeason(req, res);
+});
 
-//TODO set endpoint for getting season results
-//TODO set endpoint for setting points spread
 //TODO make port env variable
 
-var debug = require("debug")("api:server");
-var http = require("http");
+let http = require("http");
 
-var port = "8080";
+let port = "8080";
 app.set("port", port);
 
-var server = http.createServer(app);
+let server = http.createServer(app);
 
 server.listen(port);
 server.on("error", onError);
@@ -38,7 +42,7 @@ function onError(error) {
     throw error;
   }
 
-  var bind = typeof port === "string" ? "Pipe " + port : "Port " + port;
+  let bind = typeof port === "string" ? "Pipe " + port : "Port " + port;
 
   // handle specific listen errors with friendly messages
   switch (error.code) {
@@ -60,7 +64,6 @@ function onError(error) {
  */
 
 function onListening() {
-  var addr = server.address();
-  var bind = typeof addr === "string" ? "pipe " + addr : "port " + addr.port;
-  debug("Listening on " + bind);
+  let addr = server.address();
+  let bind = typeof addr === "string" ? "pipe " + addr : "port " + addr.port;
 }
