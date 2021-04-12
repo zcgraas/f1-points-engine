@@ -45,7 +45,6 @@ module.exports = getSeason = (req, response, next) => {
 
       Promise.all(racePromiseArray).then((seasonResults) => {
         return response.json(seasonResults);
-        //TODO points calculation?
       });
     })
     .catch((err) => {
