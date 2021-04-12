@@ -10,6 +10,9 @@ app.use("/", (req, res, next) => {
   res.json({ title: "Express" });
 });
 
+app.use("/points", getPoints(req, res, next));
+app.use("/season", getSeason(req, res, next));
+
 //TODO set endpoint for getting season results
 //TODO set endpoint for setting points spread
 //TODO make port env variable
