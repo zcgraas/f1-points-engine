@@ -3,7 +3,7 @@ const axios = require("axios");
 module.exports = getSeason = (req, response, next) => {
   let year = req.query.year;
   axios
-    .get(`http://ergast.com/api/f1/${year}.json` )
+    .get(`http://ergast.com/api/f1/${year}.json`)
     .then((res) => {
       let seasonLength = res.data.MRData.total;
       let racePromiseArray = [];
@@ -17,8 +17,7 @@ module.exports = getSeason = (req, response, next) => {
               let Races = res.data.MRData.RaceTable.Races;
               let raceName = Races[0].raceName;
               let raceResult = [];
-              
-              
+
               raceResult.push(raceName);
 
               Races[0].Results.map((race) => {
