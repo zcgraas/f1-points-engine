@@ -25,7 +25,7 @@ app.use("/calculate", (req, res) => {
 
 let http = require("http");
 
-let port = process.env.PORT;
+let port = process.env.BACKEND_PORT;
 app.set("port", port);
 
 let server = http.createServer(app);
