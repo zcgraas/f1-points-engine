@@ -14,5 +14,8 @@ services:
       dockerfile: Dockerfile-backend
     ports:
       - "8080:8080"
+  # cache:
+  #   container_name: postgres_cache
+  #   build:
 networks:
   internal:

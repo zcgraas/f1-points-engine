@@ -1,9 +1,11 @@
 #!/usr/bin/env node
-let express = require("express");
-let app = express();
+require("dotenv").config();
+const express = require("express");
+const app = express();
 
-let getPoints = require("./points");
-let getSeason = require("./season");
+const getPoints = require("./points");
+const getSeason = require("./season");
+const calculate = require("./calculate");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -14,17 +16,17 @@ app.use("/test", (req, res, next) => {
 
 app.use("/points", (req, res) => {
   getPoints(req, res);
-  //TODO Terminate request
 });
 app.use("/season", (req, res) => {
   getSeason(req, res);
 });
-
-//TODO make port env variable
+app.use("/calculate", (req, res) => {
+  calculate(req, res);
+});
 
 let http = require("http");
 
-let port = "8080";
+let port = process.env.PORT;
 app.set("port", port);
 
 let server = http.createServer(app);
