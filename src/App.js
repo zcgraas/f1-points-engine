@@ -1,7 +1,7 @@
-import RaceTable from "./Components/RaceTable";
+import RaceTable from "./components/RaceTable";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navigation from "./Components/Nav";
-import Info from "./Components/LandingInfo";
+import Navigation from "./components/Nav";
+import Info from "./components/LandingInfo";
 
 function App() {
   return (
