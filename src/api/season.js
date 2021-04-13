@@ -21,7 +21,7 @@ module.exports = getSeason = (req, response, next) => {
 
               Races[0].Results.slice(0, 10).map((race) => {
                 raceResult[
-                  race.position - 1
+                  race.position 
                 ] = `${race.Driver.givenName[0]} ${race.Driver.familyName}`;
               });
 

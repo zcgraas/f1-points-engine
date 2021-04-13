@@ -68,3 +68,44 @@ function onListening() {
   let addr = server.address();
   let bind = typeof addr === "string" ? "pipe " + addr : "port " + addr.port;
 }
+
+// DB functions here, may need changes to play nicely with existing backend queries//
+
+const raceDB = require('./raceDB')
+
+app.use(function (req, res, next){
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Accesss-Control-Allow-Headers');
+  next();
+});
+
+app.get('/getrace', (req, res) => {
+  raceDB.getRaces()
+  .then(response => {
+    res.status(200).send(response);
+  })
+  .catch(error => {
+    res.status(500).send(error);
+  })
+})
+
+app.post('/createrace', (req, res) => {
+  raceDB.createRaces(req.body)
+  .then(response => {
+    res.status(200).send(response);
+  })
+  .catch(error => {
+    res.status(500).send(error);
+  })
+})
+
+app.delete('/races/:id', (req, res) => {
+  raceDB.deleteRaces(req.params.id)
+  .then(response => {
+    res.status(200).send(response);
+  })
+  .catch(error => {
+    res.status(500).send(error);
+  })
+})
