@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/f1-points-engine/static/js/main.a3ccad62.chunk.js",
+    "main.js.map": "/f1-points-engine/static/js/main.a3ccad62.chunk.js.map",
+    "runtime-main.js": "/f1-points-engine/static/js/runtime-main.30cfb67d.js",
+    "runtime-main.js.map": "/f1-points-engine/static/js/runtime-main.30cfb67d.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/f1-points-engine/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.75e30f8b.chunk.js": "/f1-points-engine/static/js/2.75e30f8b.chunk.js",
+    "static/js/2.75e30f8b.chunk.js.map": "/f1-points-engine/static/js/2.75e30f8b.chunk.js.map",
+    "index.html": "/f1-points-engine/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/f1-points-engine/static/css/2.4c97ca4f.chunk.css.map",
+    "static/js/2.75e30f8b.chunk.js.LICENSE.txt": "/f1-points-engine/static/js/2.75e30f8b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.30cfb67d.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.75e30f8b.chunk.js",
+    "static/js/main.a3ccad62.chunk.js"
+  ]
+}
